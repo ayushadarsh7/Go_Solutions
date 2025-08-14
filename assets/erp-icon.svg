@@ -1,0 +1,24 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Database cylinder -->
+  <ellipse cx="40" cy="20" rx="25" ry="8" fill="#ffffff"/>
+  <rect x="15" y="20" width="50" height="40" rx="8" fill="#ffffff"/>
+  <ellipse cx="40" cy="60" rx="25" ry="8" fill="#ffffff"/>
+  
+  <!-- Database lines -->
+  <line x1="20" y1="30" x2="60" y2="30" stroke="#0d47a1" stroke-width="1"/>
+  <line x1="20" y1="35" x2="60" y2="35" stroke="#0d47a1" stroke-width="1"/>
+  <line x1="20" y1="40" x2="60" y2="40" stroke="#0d47a1" stroke-width="1"/>
+  <line x1="20" y1="45" x2="60" y2="45" stroke="#0d47a1" stroke-width="1"/>
+  <line x1="20" y1="50" x2="60" y2="50" stroke="#0d47a1" stroke-width="1"/>
+  <line x1="20" y1="55" x2="60" y2="55" stroke="#0d47a1" stroke-width="1"/>
+  
+  <!-- Connection nodes -->
+  <circle cx="25" cy="25" r="2" fill="#00acc1"/>
+  <circle cx="35" cy="25" r="2" fill="#00acc1"/>
+  <circle cx="45" cy="25" r="2" fill="#00acc1"/>
+  <circle cx="55" cy="25" r="2" fill="#00acc1"/>
+  
+  <!-- Data flow arrows -->
+  <path d="M30,15 L30,10 M40,15 L40,10 M50,15 L50,10" stroke="#ff9800" stroke-width="2" stroke-linecap="round"/>
+  <path d="M30,65 L30,70 M40,65 L40,70 M50,65 L50,70" stroke="#ff9800" stroke-width="2" stroke-linecap="round"/>
+</svg> 

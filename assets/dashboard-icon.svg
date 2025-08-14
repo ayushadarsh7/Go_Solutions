@@ -1,0 +1,35 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dashboard grid -->
+  <rect x="5" y="5" width="50" height="50" rx="3" fill="#ffffff"/>
+  
+  <!-- Grid lines -->
+  <line x1="20" y1="5" x2="20" y2="55" stroke="#0d47a1" stroke-width="1"/>
+  <line x1="35" y1="5" x2="35" y2="55" stroke="#0d47a1" stroke-width="1"/>
+  <line x1="5" y1="20" x2="55" y2="20" stroke="#0d47a1" stroke-width="1"/>
+  <line x1="5" y1="35" x2="55" y2="35" stroke="#0d47a1" stroke-width="1"/>
+  
+  <!-- Chart elements -->
+  <!-- Bar chart -->
+  <rect x="8" y="38" width="8" height="12" fill="#00acc1"/>
+  <rect x="18" y="32" width="8" height="18" fill="#00acc1"/>
+  <rect x="28" y="25" width="8" height="25" fill="#00acc1"/>
+  <rect x="38" y="30" width="8" height="20" fill="#00acc1"/>
+  <rect x="48" y="35" width="8" height="15" fill="#00acc1"/>
+  
+  <!-- Line chart -->
+  <path d="M8,25 L18,20 L28,15 L38,18 L48,22" stroke="#ff9800" stroke-width="2" fill="none"/>
+  <circle cx="8" cy="25" r="2" fill="#ff9800"/>
+  <circle cx="18" cy="20" r="2" fill="#ff9800"/>
+  <circle cx="28" cy="15" r="2" fill="#ff9800"/>
+  <circle cx="38" cy="18" r="2" fill="#ff9800"/>
+  <circle cx="48" cy="22" r="2" fill="#ff9800"/>
+  
+  <!-- Pie chart -->
+  <circle cx="15" cy="12" r="6" fill="none" stroke="#0d47a1" stroke-width="2"/>
+  <path d="M15,6 A6,6 0 0,1 21,12 A6,6 0 0,1 15,18 A6,6 0 0,1 9,12 A6,6 0 0,1 15,6 Z" fill="#0d47a1"/>
+  
+  <!-- Data indicators -->
+  <circle cx="45" cy="12" r="3" fill="#00acc1"/>
+  <circle cx="50" cy="12" r="3" fill="#ff9800"/>
+  <circle cx="55" cy="12" r="3" fill="#0d47a1"/>
+</svg> 
