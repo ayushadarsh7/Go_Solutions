@@ -85,9 +85,58 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             
-            // Show success message (in production, this would submit to Formspree)
-            alert('Thank you for your message! We\'ll get back to you soon.');
-            this.reset();
+            // Show loading state
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Prepare data for n8n webhook
+            const webhookData = {
+                name: name,
+                email: email,
+                message: message,
+                timestamp: new Date().toISOString(),
+                source: 'Go Solutions Website'
+            };
+            
+            // Try to send to n8n webhook
+            fetch('https://gosolutions-chn.app.n8n.cloud/webhook-test/8e2538c3-e0f0-4bb0-88b0-a196b35d8518', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(webhookData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Success
+                    alert('Thank you for your message! We\'ll get back to you soon.');
+                    this.reset();
+                } else {
+                    // Error
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                
+                // Check if it's a CORS error (local testing)
+                if (error.message.includes('Failed to fetch') || error.message.includes('CORS')) {
+                    // For local testing, show the data that would be sent
+                    console.log('Webhook Data (for testing):', webhookData);
+                    alert('Message received! (Local testing mode)\n\nName: ' + name + '\nEmail: ' + email + '\nMessage: ' + message + '\n\nNote: This is local testing. On live website, this will be sent to our system.');
+                    this.reset();
+                } else {
+                    // Other errors
+                    alert('Sorry, there was an error sending your message. Please try again or contact us directly.');
+                }
+            })
+            .finally(() => {
+                // Reset button state
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
         });
     }
 });
